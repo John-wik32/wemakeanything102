@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <header class="admin-header">
+            <h1>Order Management Dashboard</h1>
+        </header>
+
+        <div class="admin-controls">
+            <div class="search-box">
+                <input type="text" id="search-orders" placeholder="Search orders...">
+                <button id="search-btn">Search</button>
+            </div>
+            
+            <div class="status-tabs">
+                <button class="tab-btn active" data-status="pending">Pending</button>
+                <button class="tab-btn" data-status="on-hold">On Hold</button>
+                <button class="tab-btn" data-status="completed">Completed</button>
+            </div>
+        </div>
+
+        <div class="orders-grid">
+            <div class="order-column">
+                <h2>Pending Orders</h2>
+                <div class="order-list" id="pending-orders"></div>
+            </div>
+            <div class="order-column">
+                <h2>On Hold Orders</h2>
+                <div class="order-list" id="on-hold-orders"></div>
+            </div>
+            <div class="order-column">
+                <h2>Completed Orders</h2>
+                <div class="order-list" id="completed-orders"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="admin.js"></script>
+</body>
+</html>
